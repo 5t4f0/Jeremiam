@@ -16,9 +16,16 @@ public class PlacementSys : MonoBehaviour
     [SerializeField]
     private GameObject gridVisualization;
 
+    private GridData towerData;
+
+    private Renderer previewRenderer;
+
+
     private void Start()
     {
         StopPlacement();
+        towerData = new GridData();
+        previewRenderer = cellIndicator.GetComponentInChildren<Renderer>(); 
     }
 
     public void StartPlacement(int ID)
