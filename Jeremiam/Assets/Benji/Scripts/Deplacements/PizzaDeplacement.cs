@@ -8,7 +8,6 @@ public class PizzaDeplacement : MonoBehaviour
     public Transform firingPoint;
     public float AttackSpeed;
     private GameObject nearestTour = null;
-    
     void Awake()
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
@@ -19,7 +18,7 @@ public class PizzaDeplacement : MonoBehaviour
         SetDestinationToNearestTower();
     }
 
-    
+
     void Update()
     {
         SetDestinationToNearestTower();
@@ -41,7 +40,9 @@ public class PizzaDeplacement : MonoBehaviour
                 }
             }
         }
-        
+
+        Debug.Log(nearestTour);
+
     }
 
     void SetDestinationToNearestTower()
@@ -52,7 +53,7 @@ public class PizzaDeplacement : MonoBehaviour
         {
             return;
         }
-        
+
         float nearestDistance = Mathf.Infinity;
         Vector3 pizzaPosition = transform.position;
 
@@ -74,27 +75,27 @@ public class PizzaDeplacement : MonoBehaviour
     void ArrivedAtDestination()
     { 
         Debug.Log("ArrivedAtDestination");
-        InvokeRepeating(nameof(BombMeth),3f,AttackSpeed);
-        
-        
+        InvokeRepeating(nameof(BombMeth),0.5f,AttackSpeed);
+
+
     }
 
     void BombMeth()
     {
-        if(nearestTour.GetComponent<Caractéristique>().HP<=1)
+        if(nearestTour.GetComponent<Caractéristique>().HP!=0 && agent.velocity.sqrMagnitude == 0f)
         {
             Instantiate(Bomb,firingPoint.position, Quaternion.identity);
             Debug.Log("appelé");
-            CancelInvoke(nameof(BombMeth));
-
         }
 
         else
         {
-          Instantiate(Bomb,firingPoint.position, Quaternion.identity);
-            
+            CancelInvoke(nameof(BombMeth));
+            hasArrived = false;
         }
-        
-        
+
+
     }
-}
+
+
+} 
