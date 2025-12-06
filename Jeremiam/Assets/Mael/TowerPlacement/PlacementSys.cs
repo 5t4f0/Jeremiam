@@ -1,4 +1,7 @@
 using UnityEngine;
+using System;
+using System.Collections.Generic;
+
 
 public class PlacementSys : MonoBehaviour
 {
@@ -20,12 +23,14 @@ public class PlacementSys : MonoBehaviour
 
     private Renderer previewRenderer;
 
+    private List<GameObject> placedGameObject = new();
+
 
     private void Start()
     {
         StopPlacement();
         towerData = new GridData();
-        previewRenderer = cellIndicator.GetComponentInChildren<Renderer>(); 
+        previewRenderer = cellIndicator.GetComponentInChildren<Renderer>();
     }
 
     public void StartPlacement(int ID)
@@ -54,23 +59,44 @@ public class PlacementSys : MonoBehaviour
 
     private void PlaceStructure()
     {
-        if(inputManager.IsPointerOverUI())
+        if (inputManager.IsPointerOverUI())
         {
             return;
         }
         Vector3 mousePos = inputManager.GetSelectedMapPosition();
         Vector3Int gridPosition = grid.WorldToCell(mousePos);
+
+        bool placementValidity = CheckPlacementValidity(gridPosition, selectedObjectIndex);
+        if (placementValidity == false)
+        {
+            return;
+        }
+
         GameObject newGameObject = Instantiate(database.objectsData[selectedObjectIndex].Prefab);
         newGameObject.transform.position = grid.CellToWorld(gridPosition);
+        placedGameObject.Add(newGameObject);
+        GridData selectedData = towerData;
+        selectedData.AddObjectAt(gridPosition, database.objectsData[selectedObjectIndex].Size, database.objectsData[selectedObjectIndex].ID, placedGameObject.Count - 1);
     }
-    
+
     private void Update()
     {
-        if(selectedObjectIndex < 0)
-            { return; }
+        if (selectedObjectIndex < 0)
+        { return; }
         Vector3 mousePos = inputManager.GetSelectedMapPosition();
         Vector3Int gridPosition = grid.WorldToCell(mousePos);
+
+        bool placementValidity = CheckPlacementValidity(gridPosition, selectedObjectIndex);
+        previewRenderer.material.color = placementValidity ? Color.white : Color.red;
+
         mouseIndicator.transform.position = mousePos;
         cellIndicator.transform.position = grid.CellToWorld(gridPosition);
+    }
+
+    private bool CheckPlacementValidity(Vector3Int gridPosition, int selectedObjectIndex)
+    {
+        GridData selectedData = towerData;
+
+        return selectedData.CanPlaceObjectAt(gridPosition, database.objectsData[selectedObjectIndex].Size);
     }
 }
