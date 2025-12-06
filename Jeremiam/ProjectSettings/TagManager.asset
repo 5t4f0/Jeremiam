@@ -9,6 +9,8 @@ TagManager:
   - DestC
   - DestD
   - Ennemi
+  - Tour
+  - Ground
   layers:
   - Default
   - TransparentFX
