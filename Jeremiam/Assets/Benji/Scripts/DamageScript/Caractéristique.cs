@@ -6,9 +6,13 @@ public class Caractéristique : MonoBehaviour
 {
     public float HP;
     public float speed;
-
-    private void Start()
+    
+    private void FixedUpdate()
     {
+        if (HP <= 0)
+        {
+            Destroy(gameObject);
+        }
         if(GetComponent<NavMeshAgent>()==null)
         {
             return;
@@ -17,13 +21,7 @@ public class Caractéristique : MonoBehaviour
         {
             GetComponent<NavMeshAgent>().speed = speed;
         }
-    }
-
-    private void FixedUpdate()
-    {
-        if (HP <= 0)
-        {
-            Destroy(gameObject);
-        }
+        
+        
     }
 }
