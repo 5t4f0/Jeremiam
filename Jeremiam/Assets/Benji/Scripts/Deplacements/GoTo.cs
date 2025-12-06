@@ -5,11 +5,28 @@ using UnityEngine;
 public class GoTo : MonoBehaviour
 {
     public UnityEngine.AI.NavMeshAgent Agent;
-    public Transform target;
-    public Transform targetA;
+    public string Dest = "DestA";
+    public int Stage;
     private void Start()
     {
-        target = targetA;
-        Agent.SetDestination(target.position);
+        if (Stage == 1)
+        {
+            Dest = "DestA";
+        }
+        if (Stage == 2)
+        {
+            Dest = "DestB";
+        }
+        if (Stage == 3)
+        {
+            Dest = "DestC";
+        }
+        if (Stage == 4)
+        {
+            Dest = "DestD";
+        }
+        GameObject target = GameObject.FindGameObjectWithTag(Dest);
+        Agent.SetDestination(target.transform.position);
     }
+    
 }
