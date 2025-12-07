@@ -6,13 +6,17 @@ public class Caractéristique : MonoBehaviour
 {
     public float HP;
     public float speed;
-    
-    private void FixedUpdate()
+
+    public enum Type
     {
-        if (HP <= 0)
-        {
-            Destroy(gameObject);
-        }
+        air,
+        ground
+    }
+
+    public Type type; 
+
+    private void Start()
+    {
         if(GetComponent<NavMeshAgent>()==null)
         {
             return;
@@ -21,7 +25,13 @@ public class Caractéristique : MonoBehaviour
         {
             GetComponent<NavMeshAgent>().speed = speed;
         }
-        
-        
+    }
+
+    private void FixedUpdate()
+    {
+        if (HP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
