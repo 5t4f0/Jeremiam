@@ -5,7 +5,7 @@ public class TowerScript : MonoBehaviour
     public ObjectDatabaseSO database;
     public int id;
 
-    float health;
+    public float health;
     float damage;
     float attackSpeed;
     private float attackSpeedDef;
@@ -40,7 +40,10 @@ public class TowerScript : MonoBehaviour
             attackSpeed = attackSpeedDef;
         }
 
-
+        if(health  <= 0f)
+        {
+            Destroy(gameObject);
+        }
 
         attackSpeed -= Time.deltaTime;
     }
@@ -78,8 +81,9 @@ public class TowerScript : MonoBehaviour
     {
         GameObject bulletGO = (GameObject)Instantiate(projectile, attackPoint.position, attackPoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
+        bullet.damage = damage;
 
         if (bullet != null)
-            bullet.Seek(currentTarget.transform);
+            bullet.Seek(currentTarget);
     }
 }

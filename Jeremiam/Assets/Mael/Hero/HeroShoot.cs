@@ -56,6 +56,6 @@ public class HeroShoot : MonoBehaviour
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         if (bullet != null)
-            bullet.Seek(currentTarget.transform);
+            bullet.Seek(currentTarget);
     }
 }
