@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class Waves : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Waves : MonoBehaviour
     public int CountDown = 0;
     public int Randum=1;
     public int MoreEnnemies;
+    public bool LastSpawned = false;
 
     private void Start()
     {
@@ -41,6 +43,19 @@ public class Waves : MonoBehaviour
         if (WaveNumber == 3)
         {
             EnnemiNumber = 5+MoreEnnemies;
+        }
+        GameObject[] Ennemis = GameObject.FindGameObjectsWithTag("Ennemi");
+        if (Ennemis.Length == 0)
+        {
+            if (WaveNumber == 1)
+            {
+                SceneManager.LoadScene("CheeseCin");
+            }
+
+            if (WaveNumber == 2)
+            {
+                SceneManager.LoadScene("End");
+            }
         }
     }
 
@@ -82,6 +97,9 @@ public class Waves : MonoBehaviour
         if (CountDown == EnnemiNumber)
         {
             EndWave();
+            LastSpawned = true;
+            GameObject[] Ennemis = GameObject.FindGameObjectsWithTag("Ennemi");
+            WaveNumber++;
         }
     }
 }
