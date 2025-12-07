@@ -73,6 +73,7 @@ public class PlacementSys : MonoBehaviour
         }
 
         GameObject newGameObject = Instantiate(database.objectsData[selectedObjectIndex].Prefab);
+        newGameObject.GetComponent<TowerScript>().id = selectedObjectIndex;
         newGameObject.transform.position = grid.CellToWorld(gridPosition);
         placedGameObject.Add(newGameObject);
         GridData selectedData = towerData;

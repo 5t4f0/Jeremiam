@@ -22,16 +22,18 @@ public class GridData
 
     private List<Vector3Int> CalculatePositions(Vector3Int gridPosition, Vector2Int objectSize)
     {
-        List<Vector3Int> returnVal = new();
-        for (int x = 0; x < placedObjects.Count; x++)
+        List<Vector3Int> positions = new();
+        for (int x = 0; x < objectSize.x; x++)
         {
             for (int y = 0; y < objectSize.y; y++)
             {
-                returnVal.Add(gridPosition + new Vector3Int(x, 0, y));
+                // XZ grid, Y = 0
+                positions.Add(gridPosition + new Vector3Int(x, 0, y));
             }
         }
-        return returnVal;
+        return positions;
     }
+
 
     public bool CanPlaceObjectAt(Vector3Int gridPosition, Vector2Int objectSize)
     {
@@ -51,10 +53,10 @@ public class PlacementData
     public int ID { get; private set; }
     public int PlacedObjectsIndex { get; private set; }
 
-    public PlacementData(List<Vector3Int> occupiedPositions, int ID, int placedObjectsIndex)
+    public PlacementData(List<Vector3Int> occupiedPositions, int id, int placedObjectsIndex)
     {
         this.occupiedPositions = occupiedPositions;
-        ID = ID;
+        ID = id;                          // now sets the property
         PlacedObjectsIndex = placedObjectsIndex;
     }
 }
