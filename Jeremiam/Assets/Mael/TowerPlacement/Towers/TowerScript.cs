@@ -17,6 +17,8 @@ public class TowerScript : MonoBehaviour
     [SerializeField]
     private Transform attackPoint;
     [SerializeField] private GameObject projectile;
+    [SerializeField] private GameObject BrokenAsset;
+
 
     void Awake()
     {
@@ -27,6 +29,7 @@ public class TowerScript : MonoBehaviour
         range = database.objectsData[id].Range;
         targetMode = database.objectsData[id].Target;
 
+                Debug.Log(targetMode);
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
@@ -85,5 +88,10 @@ public class TowerScript : MonoBehaviour
 
         if (bullet != null)
             bullet.Seek(currentTarget);
+    }
+
+    void OnDestroy()
+    {
+        Instantiate(BrokenAsset);
     }
 }

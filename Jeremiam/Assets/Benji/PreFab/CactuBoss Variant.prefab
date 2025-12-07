@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CactuBoss Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5006141899562771515, guid: 07cdfe80b728a6a409440f88cedda472, type: 3}
+      propertyPath: type
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8502936233016554545, guid: 07cdfe80b728a6a409440f88cedda472, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.52605516
@@ -249,9 +253,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1107928647877775166, guid: 07cdfe80b728a6a409440f88cedda472, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1159504168391408653}
-    - targetCorrespondingSourceObject: {fileID: 1107928647877775166, guid: 07cdfe80b728a6a409440f88cedda472, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 6838074258247112130}
   m_SourcePrefab: {fileID: 100100000, guid: 07cdfe80b728a6a409440f88cedda472, type: 3}
 --- !u!1 &714340347715704574 stripped
@@ -259,20 +260,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1107928647877775166, guid: 07cdfe80b728a6a409440f88cedda472, type: 3}
   m_PrefabInstance: {fileID: 471189105769257408}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1159504168391408653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714340347715704574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfb3716abbf69b74aba27ddc7282a60d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 5
-  speed: 5
 --- !u!114 &6838074258247112130
 MonoBehaviour:
   m_ObjectHideFlags: 0
