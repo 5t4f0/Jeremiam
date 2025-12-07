@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+            Debug.Log(target);
 
         if (target == null)
         {
