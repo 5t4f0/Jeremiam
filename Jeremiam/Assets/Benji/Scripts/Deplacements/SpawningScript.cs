@@ -11,13 +11,7 @@ public class SpawningScript : MonoBehaviour
     public Waves Waves;
 
 
-    private void Start()
-    {
-        if (Waves.WaveNumber == 2)
-        {
-            Instantiate(Cactus,SpawnPoint.position,Quaternion.identity);
-        }
-    }
+    
 
     public void SpawnLegume()
     {
@@ -27,6 +21,15 @@ public class SpawningScript : MonoBehaviour
         
         Waves.AddCountDown();
          
+    }
+
+    public void SpawnCactus()
+    {
+        GameObject clone = Cactus;
+        clone.GetComponent<GoTo>().Stage = Stage;
+        Instantiate(clone,SpawnPoint.position,Quaternion.identity);
+        
+        Waves.AddCountDown();
     }
     
 }
