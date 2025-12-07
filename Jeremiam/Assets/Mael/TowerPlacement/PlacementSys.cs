@@ -17,6 +17,9 @@ public class PlacementSys : MonoBehaviour
     private int selectedObjectIndex = -1;
 
     [SerializeField]
+    private LayerMask roadLayer;
+
+    [SerializeField]
     private GameObject gridVisualization;
 
     private GridData towerData;
@@ -98,6 +101,34 @@ public class PlacementSys : MonoBehaviour
     {
         GridData selectedData = towerData;
 
+        if (HasRoadAbove(gridPosition, database.objectsData[selectedObjectIndex].Size))
+        {
+            return false;
+        }
+
         return selectedData.CanPlaceObjectAt(gridPosition, database.objectsData[selectedObjectIndex].Size);
+    }
+
+    private bool HasRoadAbove(Vector3Int gridPosition, Vector2Int objectSize)
+    {
+        for (int x = 0; x < objectSize.x; x++)
+        {
+            for (int y = 0; y < objectSize.y; y++)
+            {
+                Vector3Int cellPos = gridPosition + new Vector3Int(x, 0, y);
+
+                Vector3 cellWorldPos = grid.GetCellCenterWorld(cellPos);
+
+                Vector3 rayOrigin = cellWorldPos + Vector3.up * 10f;
+                float rayDistance = 20f;
+
+                if (Physics.Raycast(rayOrigin, Vector3.down, out RaycastHit hit, rayDistance, roadLayer))
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 }
