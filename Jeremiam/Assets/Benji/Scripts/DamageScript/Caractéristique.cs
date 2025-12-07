@@ -14,8 +14,9 @@ public class Caractéristique : MonoBehaviour
     public float speed;
 
     public Type type; 
+    
 
-    private void Start()
+    private void FixedUpdate()
     {
         if(GetComponent<NavMeshAgent>()==null)
         {
@@ -25,13 +26,10 @@ public class Caractéristique : MonoBehaviour
         {
             GetComponent<NavMeshAgent>().speed = speed;
         }
-    }
-
-    private void FixedUpdate()
-    {
         if (HP <= 0)
         {
             Destroy(gameObject);
         }
+        
     }
 }

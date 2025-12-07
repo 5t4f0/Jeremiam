@@ -56,7 +56,7 @@ public class TowerScript : MonoBehaviour
 
         foreach (GameObject enemy in enemies)
         {
-            if ((enemy.GetComponent<Caractéristique>().type == Type.air && targetMode == ObjectData.AttackMode.Air) || (enemy.GetComponent<Caractéristique>().type == Type.ground && targetMode == ObjectData.AttackMode.Ground))
+            if ((enemy.GetComponent<CaractÃ©ristique>().type == Type.air && targetMode == ObjectData.AttackMode.Air) || (enemy.GetComponent<CaractÃ©ristique>().type == Type.ground && targetMode == ObjectData.AttackMode.Ground))
             {
                 float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
                 if (distanceToEnemy < shortestDistance)
