@@ -77,9 +77,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   database: {fileID: 11400000, guid: df370442a632f4b419d8b150fd3133b5, type: 2}
-  id: 0
+  id: 1
+  health: 0
   attackPoint: {fileID: 6532686666618313901}
-  projectile: {fileID: 3137188067776700009, guid: f7258f87d6ff0a545b0c8bccd6ab5b9b, type: 3}
+  projectile: {fileID: 6884633535191716093, guid: 6a5cf785b87d77447bfcf6892374e838, type: 3}
 --- !u!1001 &3186774857269330773
 PrefabInstance:
   m_ObjectHideFlags: 0

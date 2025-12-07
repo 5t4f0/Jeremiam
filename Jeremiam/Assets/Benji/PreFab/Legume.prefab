@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Agent: {fileID: 3645416424754789894}
   Dest: DestA
+  Stage: 1
 --- !u!54 &4319152184458263921
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -189,5 +190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb3716abbf69b74aba27ddc7282a60d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 5
+  HP: 1
   speed: 5
+  type: 1
