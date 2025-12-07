@@ -18,7 +18,7 @@ MonoBehaviour:
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 7548662837295473348, guid: 1385985539a78494ba7605d2aa621a09, type: 3}
     <Health>k__BackingField: 2
-    <Damage>k__BackingField: 1
+    <Damage>k__BackingField: 5
     <AttackSpeed>k__BackingField: 0.5
     <Range>k__BackingField: 5
     <Target>k__BackingField: 1
@@ -27,7 +27,7 @@ MonoBehaviour:
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 7548662837295473348, guid: 6259dcfc4acc6a448bbef79ae8c7c054, type: 3}
     <Health>k__BackingField: 2
-    <Damage>k__BackingField: 1
+    <Damage>k__BackingField: 5
     <AttackSpeed>k__BackingField: 0.5
     <Range>k__BackingField: 5
     <Target>k__BackingField: 0
