@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8567033184631543769}
+  - component: {fileID: 3537460238682760611}
   m_Layer: 0
   m_Name: GroundTower
   m_TagString: Untagged
@@ -32,6 +33,22 @@ Transform:
   - {fileID: 3148873364740908222}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3537460238682760611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7548662837295473348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edb5121165597974c9109b3469a2c7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  database: {fileID: 11400000, guid: df370442a632f4b419d8b150fd3133b5, type: 2}
+  id: 0
+  attackPoint: {fileID: 0}
+  projectile: {fileID: 0}
 --- !u!1001 &3186774857269330773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58,7 +75,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 95d7564fb9860bc4cbb877ef40cbb966, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.887
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 95d7564fb9860bc4cbb877ef40cbb966, type: 3}
       propertyPath: m_LocalPosition.z
