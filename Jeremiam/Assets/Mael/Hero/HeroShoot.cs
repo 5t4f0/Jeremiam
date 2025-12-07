@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class HeroShoot : MonoBehaviour
 {
-    float damage;
+    float damage = 2;
     public float range;
-    float attackSpeed;
+    float attackSpeed = 1;
     private float attackSpeedDef;
 
     GameObject currentTarget;
@@ -54,6 +54,8 @@ public class HeroShoot : MonoBehaviour
     {
         GameObject bulletGO = (GameObject)Instantiate(projectile, attackPoint.position, attackPoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
+        bullet.damage = damage;
+        
 
         if (bullet != null)
             bullet.Seek(currentTarget);

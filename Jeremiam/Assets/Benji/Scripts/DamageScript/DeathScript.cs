@@ -8,7 +8,7 @@ public class DeathScript : MonoBehaviour
         if (other.gameObject.tag == "Ennemi")
         {
             Debug.Log("Ennemi");
-            SceneManager.LoadScene("Benji/jspckoi");
+            SceneManager.LoadScene("Benji/DeathCin");
         }
     }
 }
