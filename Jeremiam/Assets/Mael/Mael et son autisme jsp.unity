@@ -676,6 +676,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3456892436773435399, guid: 98b1e30ce69d10740ac54de728bd9fea, type: 3}
   m_PrefabInstance: {fileID: 1331238104}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &476155202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1901339041862027287, guid: 1c66c10239f909e489a753934c6031c6, type: 3}
+  m_PrefabInstance: {fileID: 498265625}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &498265625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -732,10 +737,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Destination B (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 269736570900226330, guid: 1c66c10239f909e489a753934c6031c6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1901339041862027287, guid: 1c66c10239f909e489a753934c6031c6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1447603889}
   m_SourcePrefab: {fileID: 100100000, guid: 1c66c10239f909e489a753934c6031c6, type: 3}
 --- !u!1 &506396490
 GameObject:
@@ -3127,6 +3136,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1164079131378359514, guid: 1c66c10239f909e489a753934c6031c6, type: 3}
   m_PrefabInstance: {fileID: 498265625}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1447603889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476155202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a564483a914cd4d84094803cb088dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NewTarget1: {fileID: 1106959439}
+  NewTarget2: {fileID: 1699530804}
+  Way: 0
 --- !u!1001 &1473358150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4200,6 +4224,9 @@ MonoBehaviour:
   inputManager: {fileID: 1509543503}
   grid: {fileID: 1388737908}
   database: {fileID: 11400000, guid: df370442a632f4b419d8b150fd3133b5, type: 2}
+  roadLayer:
+    serializedVersion: 2
+    m_Bits: 8
   gridVisualization: {fileID: 654307866}
 --- !u!1 &1694452709
 GameObject:
