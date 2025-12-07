@@ -3,13 +3,13 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    private Transform target;
+    private GameObject target;
 
     public float speed = 70f;
 
-    public int damage = 1;
+    public float damage;
 
-    public void Seek(Transform _target)
+    public void Seek(GameObject _target)
     {
         target = _target;
     }
@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour
             return;
         }
 
-        Vector3 dir = target.position - transform.position;
+        Vector3 dir = target.transform.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
 
         if (dir.magnitude <= distanceThisFrame)
@@ -34,7 +34,7 @@ public class Bullet : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-        transform.LookAt(target);
+        transform.LookAt(target.transform);
 
     }
 
@@ -45,8 +45,8 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void Damage(Transform enemy)
+    void Damage(GameObject enemy)
     {
-        //Dégats ici chef
+        enemy.GetComponent<Caractéristique>().HP -= damage;
     }
 }

@@ -9,7 +9,7 @@ public class BombScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Tour"))
         {
-            other.gameObject.GetComponent<Caractéristique>().HP -= Damage;
+            other.gameObject.GetComponent<TowerScript>().health -= Damage;
             Destroy(gameObject);
         }
         if (other.gameObject.CompareTag("Ground"))
