@@ -4,7 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/MainMenu.unity
+    guid: 955b9f4b6e5133041bca14ad5a45e304
+  - enabled: 1
+    path: Assets/CinematicScene.unity
+    guid: 0b03a945049535e429045b8789a20c1c
+  - enabled: 1
+    path: Assets/Benji/jspckoi.unity
+    guid: 8e55095e8496e114a85b5b442dcea5ea
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0
