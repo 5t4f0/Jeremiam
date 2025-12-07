@@ -81,7 +81,7 @@ MonoBehaviour:
   id: 1
   health: 0
   attackPoint: {fileID: 6532686666618313901}
-  projectile: {fileID: 3137188067776700009, guid: f7258f87d6ff0a545b0c8bccd6ab5b9b, type: 3}
+  projectile: {fileID: 6884633535191716093, guid: 6a5cf785b87d77447bfcf6892374e838, type: 3}
   BrokenAsset: {fileID: 8048386806059341848, guid: c85e5be6ece47424a867dbd3d8716669, type: 3}
 --- !u!1001 &3186774857269330773
 PrefabInstance:
