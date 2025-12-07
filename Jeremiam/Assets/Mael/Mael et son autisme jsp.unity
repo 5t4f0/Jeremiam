@@ -936,6 +936,11 @@ Transform:
   - {fileID: 578185110}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &549765737 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -3189595122676651536, guid: 86044acb94216b34cb544666664f9768, type: 3}
+  m_PrefabInstance: {fileID: 1138471695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &557349434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3a7d269761934f04c90d9a9a4df8602c, type: 3}
@@ -2021,6 +2026,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934895529}
   m_CullTransparentMesh: 1
+--- !u!1 &941609960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 86044acb94216b34cb544666664f9768, type: 3}
+  m_PrefabInstance: {fileID: 1138471695}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &941609964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941609960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6670ee1286104642a6a2e0e9d10ebac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  range: 100
+  attackSpeed: 2
+  attackPoint: {fileID: 549765737}
+  projectile: {fileID: 3137188067776700009, guid: f7258f87d6ff0a545b0c8bccd6ab5b9b, type: 3}
 --- !u!1001 &949196112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2714,7 +2741,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 86044acb94216b34cb544666664f9768, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 941609964}
   m_SourcePrefab: {fileID: 100100000, guid: 86044acb94216b34cb544666664f9768, type: 3}
 --- !u!1 &1139256233
 GameObject:

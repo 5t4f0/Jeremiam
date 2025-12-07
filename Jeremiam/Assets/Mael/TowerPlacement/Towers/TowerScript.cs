@@ -17,6 +17,8 @@ public class TowerScript : MonoBehaviour
     [SerializeField]
     private Transform attackPoint;
     [SerializeField] private GameObject projectile;
+    [SerializeField] private GameObject BrokenAsset;
+
 
     void Awake()
     {
@@ -27,6 +29,7 @@ public class TowerScript : MonoBehaviour
         range = database.objectsData[id].Range;
         targetMode = database.objectsData[id].Target;
 
+                Debug.Log(targetMode);
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
     }
 
@@ -56,7 +59,7 @@ public class TowerScript : MonoBehaviour
 
         foreach (GameObject enemy in enemies)
         {
-            if ((enemy.GetComponent<Caractéristique>().type == Type.air && targetMode == ObjectData.AttackMode.Air) || (enemy.GetComponent<Caractéristique>().type == Type.ground && targetMode == ObjectData.AttackMode.Ground))
+            if ((enemy.GetComponent<CaractÃ©ristique>().type == Type.air && targetMode == ObjectData.AttackMode.Air) || (enemy.GetComponent<CaractÃ©ristique>().type == Type.ground && targetMode == ObjectData.AttackMode.Ground))
             {
                 float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
                 if (distanceToEnemy < shortestDistance)
@@ -85,5 +88,10 @@ public class TowerScript : MonoBehaviour
 
         if (bullet != null)
             bullet.Seek(currentTarget);
+    }
+
+    void OnDestroy()
+    {
+        Instantiate(BrokenAsset);
     }
 }

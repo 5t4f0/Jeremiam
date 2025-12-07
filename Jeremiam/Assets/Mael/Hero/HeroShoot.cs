@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class HeroShoot : MonoBehaviour
 {
-    float damage;
+    public float damage = 2;
     public float range;
-    float attackSpeed;
+    public float attackSpeed = 2;
     private float attackSpeedDef;
 
     GameObject currentTarget;
@@ -31,6 +31,7 @@ public class HeroShoot : MonoBehaviour
         }
 
         attackSpeed -= Time.deltaTime;
+
     }
 
     void UpdateTarget()
@@ -48,12 +49,14 @@ public class HeroShoot : MonoBehaviour
                 nearestEnemy = enemy;
             }
         }
+        currentTarget = nearestEnemy;
     }
 
     void Shoot()
     {
         GameObject bulletGO = (GameObject)Instantiate(projectile, attackPoint.position, attackPoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
+        bullet.damage = damage;
 
         if (bullet != null)
             bullet.Seek(currentTarget);
