@@ -84,6 +84,8 @@ MonoBehaviour:
   attackPoint: {fileID: 2892166359336050382}
   projectile: {fileID: 3137188067776700009, guid: f7258f87d6ff0a545b0c8bccd6ab5b9b, type: 3}
   BrokenAsset: {fileID: 4880445946054479709, guid: f87ea2f4e24dc924dba7e5ab89019004, type: 3}
+  Waves: {fileID: 0}
+  Count: 3
 --- !u!1 &8325359668054032610
 GameObject:
   m_ObjectHideFlags: 0

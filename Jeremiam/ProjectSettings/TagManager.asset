@@ -12,6 +12,7 @@ TagManager:
   - Tour
   - Ground
   - FinalBoss
+  - SpawnDriver
   layers:
   - Default
   - TransparentFX

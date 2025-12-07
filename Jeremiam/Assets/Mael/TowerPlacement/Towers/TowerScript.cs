@@ -18,10 +18,13 @@ public class TowerScript : MonoBehaviour
     private Transform attackPoint;
     [SerializeField] private GameObject projectile;
     [SerializeField] private GameObject BrokenAsset;
-
+    public Waves Waves;
+    public int Count;
 
     void Awake()
     {
+        Waves=GameObject.FindWithTag("SpawnDriver").GetComponent<Waves>();
+        Waves.MoreEnnemies = Waves.MoreEnnemies + Count;
         health = database.objectsData[id].Health;
         damage = database.objectsData[id].Damage;
         attackSpeed = database.objectsData[id].AttackSpeed;

@@ -2505,6 +2505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawn
       objectReference: {fileID: 0}
+    - target: {fileID: 2351882906018163358, guid: 1c50918b70e9cce48854efcd46a41525, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6855896049377747293, guid: 1c50918b70e9cce48854efcd46a41525, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3929,57 +3933,22 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!1 &1477395378
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1477395379}
-  - component: {fileID: 1477395380}
-  m_Layer: 0
-  m_Name: DriverSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1477395379
+--- !u!4 &1477395379 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5266881067574105094, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+  m_PrefabInstance: {fileID: 9019405157070955852}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1477395378}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.37, y: -0.2451312, z: 0.46047437}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1062162413}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1477395380
+--- !u!114 &1477395380 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4936800730802059563, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+  m_PrefabInstance: {fileID: 9019405157070955852}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1477395378}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21f54c83efe62334b896d9c4bab59d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FinalBoss: {fileID: 1664299928}
-  Spawn: {fileID: 2049877850}
-  Spawn2: {fileID: 358602652}
-  WaveNumber: 1
-  EnnemiNumber: 3
-  CountDown: 0
-  Randum: 1
 --- !u!1 &1509543502
 GameObject:
   m_ObjectHideFlags: 0
@@ -6049,6 +6018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawn2
       objectReference: {fileID: 0}
+    - target: {fileID: 2351882906018163358, guid: 1c50918b70e9cce48854efcd46a41525, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6855896049377747293, guid: 1c50918b70e9cce48854efcd46a41525, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6744,6 +6717,75 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1abebd6fdbb40f4aa6fa90a7d756377, type: 3}
+--- !u!1001 &9019405157070955852
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1062162413}
+    m_Modifications:
+    - target: {fileID: 4936800730802059563, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+      propertyPath: Spawn
+      value: 
+      objectReference: {fileID: 2049877850}
+    - target: {fileID: 4936800730802059563, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+      propertyPath: Spawn2
+      value: 
+      objectReference: {fileID: 358602652}
+    - target: {fileID: 4936800730802059563, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+      propertyPath: FinalBoss
+      value: 
+      objectReference: {fileID: 1664299928}
+    - target: {fileID: 5266881067574105094, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266881067574105094, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2451312
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266881067574105094, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.46047437
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266881067574105094, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266881067574105094, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266881067574105094, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266881067574105094, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266881067574105094, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266881067574105094, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5266881067574105094, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8270455983423265386, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
+      propertyPath: m_Name
+      value: DriverSpawn
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 01ee0230a2b3ed546965094087ee6c48, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -30,15 +30,15 @@ public class Waves : MonoBehaviour
         Randum=UnityEngine.Random.Range(1,4);
         if (WaveNumber == 1)
         {
-            EnnemiNumber = 3+MoreEnnemies;
+            EnnemiNumber = 3;
         }
 
         if (WaveNumber == 2)
         {
-            EnnemiNumber = 4+MoreEnnemies;
+            EnnemiNumber = 3+MoreEnnemies;
         }
 
-        if (WaveNumber == 3+)
+        if (WaveNumber == 3)
         {
             EnnemiNumber = 5+MoreEnnemies;
         }
