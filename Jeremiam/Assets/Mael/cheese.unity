@@ -2577,6 +2577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Final Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 2570753348481355127, guid: 1c50918b70e9cce48854efcd46a41525, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4675387992114751173, guid: 1c50918b70e9cce48854efcd46a41525, type: 3}
       propertyPath: GT
       value: 
@@ -4942,7 +4946,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1003288872}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664299928}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1f430f593e35df48a6ca290aa2801fd, type: 3}
   m_Name: 
